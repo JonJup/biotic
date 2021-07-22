@@ -124,6 +124,10 @@ calcscore<-function(abundances, taxonlist, index){
       # calculate LIFE index (sum/n)
       scorelist<-c(round(sum(LIFEscores$LIFE, na.rm=TRUE)/sum(!is.na(LIFEscores$LIFE)),2))
     }
+    if (index=="IBMWP"){
+      samplescores<-extractrows(taxapresent, indextable)
+      scorelist<-c(sum(samplescores$IBMWP, na.rm=TRUE), sum(!is.na(samplescores$IBMWP)), round(sum(samplescores$IBMWP, na.rm=TRUE)/sum(!is.na(samplescores$IBMWP)),2))
+    }
   return(scorelist)
   # this closes the nrows loop
   }

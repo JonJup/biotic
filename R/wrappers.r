@@ -182,3 +182,21 @@ calcPSI<-function(df, type="num"){
 calcAWIC<-function(df, type="num"){
   calcindex(df, index="AWIC", type=type)
 }
+
+#' Calculate Iberian BMWP indices for invertebrate samples
+#' @description Calculates Iberian BMWP, ASPT and N-taxa indices
+#' for invertebrate samples.
+#' @inheritParams calcBMWP
+#' @return A data frame consisting of columns of index values with samples
+#' in rows.
+#' @export calcIBMWP
+#' @examples
+#'
+#' # calculate the Iberian BMWP indices for the Green Burn dataset
+#' # data are numeric log abundance categories, so type is "log"
+#'
+#' calcIBMWP(greenburn, "log")
+
+calcIBMWP<-function(df, type="num"){
+  calcindex(df, index="IBMWP", type=type)
+}

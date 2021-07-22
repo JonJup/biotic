@@ -2,3 +2,4 @@
 .Rhistory
 .RData
 inst/doc
+R/add_IBMWP.R

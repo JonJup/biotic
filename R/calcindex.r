@@ -67,7 +67,7 @@
 calcindex<-function(df, index="BMWP", type="num"){
 
   # check that a correct method has been specified
-  INDICES<-c("BMWP", "Whalley", "Riffle", "Pool", "RiffPool", "PSI", "LIFE", "WHPT", "WHPT_AB", "AWIC")
+  INDICES<-c("BMWP", "Whalley", "Riffle", "Pool", "RiffPool", "PSI", "LIFE", "WHPT", "WHPT_AB", "AWIC", "IBMWP")
   indextype<-pmatch(index, INDICES)
   if (is.na(indextype))
     stop("Invalid index choice")
