@@ -202,6 +202,10 @@ calcindex<-function(df, index="BMWP", type="num"){
   if (index=="WHPT_AB"){
     colnames(output)<-c("WHPT_AB_ASPT", "WHPT_AB_Ntaxa")
   }
+  if (index=="IBMWP"){
+    colnames(output)<-c("IBMWP", "Ntaxa", "IASPT")
+  }
+
 
   # add on sample identifier column and set row names to null
   output<-as.data.frame(cbind.data.frame(row.names(output), output))
